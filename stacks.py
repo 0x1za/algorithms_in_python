@@ -16,8 +16,3 @@ class Stack:
 
     def size(self):
         return len(self.items)
-
-
-a = Stack()
-a.push("M")
-print (a.peek())
