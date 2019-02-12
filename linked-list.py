@@ -7,12 +7,24 @@ class Node:
 
 		return None
 
-	def has_value(self, value):
-		# Compare value in node.
-		if self.data == value:
-			return True
-		else:
-			return False
+	def getData(self):
+		return self.data
 
-node = Node(12)
+	def getNext(self):
+		return self.next
 
+	def setData(self, value):
+		self.data = value
+
+	def setNext(self, new_next):
+		self.next = new_next
+
+class SingleLinkedList(object):
+	""" Docstring for SingleLinkedList """
+	def __init__(self):
+		self.head = None
+		self.tail = None
+
+
+a = Node("Mwiza")
+print(a.getData())
