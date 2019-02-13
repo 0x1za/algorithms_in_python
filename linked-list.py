@@ -45,8 +45,18 @@ class SingleLinkedList:
 
 		return count
 
+	def search(self, item):
+		current = self.head
+		found = False
+
+		while current != None and not found:
+			if current.getData() == item:
+				found = True
+			else:
+				current = current.getNext()
+		return found
 
 
 mylist = SingleLinkedList()
 mylist.add("Mwiza")
-print (mylist.count())
+print (mylist.search("Mwiza"))
