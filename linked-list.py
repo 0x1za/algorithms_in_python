@@ -35,9 +35,18 @@ class SingleLinkedList:
 		new_node.setNext(self.head)
 		self.head = new_node
 
+	def count(self):
+		current = self.head
+		count = 0
+
+		while current != None:
+			count+=1
+			current = current.getNext()
+
+		return count
+
 
 
 mylist = SingleLinkedList()
-print (mylist.head)
-a = Node("Mwiza")
-print(a.getData())
+mylist.add("Mwiza")
+print (mylist.count())
