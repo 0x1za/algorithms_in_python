@@ -11,9 +11,12 @@ class LinkedList:
     # Display the list. Linked list traversal.
     def display(self):
         temp = self.head
+        display = ""
         while temp:
-            print(temp.data)
+            display+=(str(temp.data)+" -> ")
             temp = temp.next
+        display+="None"
+        print(display)
 
     def push(self, data):
         # Create the new node before we insert it at the beginning of the LL
@@ -32,12 +35,8 @@ class LinkedList:
 llist = LinkedList()
 
 # Create some nodes.
-llist.head = Node(1)
-second = Node(2)
-third = Node(3)
-
-llist.head.next = second
-second.next = third
+llist.push(2)
+llist.push(3)
 
 llist.display()
 
