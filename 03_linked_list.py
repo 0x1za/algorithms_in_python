@@ -29,7 +29,29 @@ class LinkedList:
         self.head = new_node
 
     def append(self, data):
-        pass
+        # Inserting data at the end of the linked list.
+
+        new_node = Node(data)
+
+        if self.head == None:
+            self.head = new_node
+            return
+
+        last = self.head
+        while last.next:
+            last = last.next
+
+        last.next = new_node
+
+
+    def insert(self, previous_node, data):
+        if previous_node == None:
+            return
+
+        # Create a new node with new data
+        new_node = Node(data)
+        new_node.next = previous_node.next
+        previous_node.next = new_node
 
 
 # Tests
@@ -41,6 +63,8 @@ llist = LinkedList()
 llist.push(2)
 llist.push(3)
 llist.push(4)
+
+llist.append(1)
 
 llist.display()
 
