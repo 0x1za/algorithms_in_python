@@ -28,6 +28,9 @@ class LinkedList:
         # Move the head pointer to the new node.
         self.head = new_node
 
+    def append(self, data):
+        pass
+
 
 # Tests
 
@@ -37,6 +40,7 @@ llist = LinkedList()
 # Create some nodes.
 llist.push(2)
 llist.push(3)
+llist.push(4)
 
 llist.display()
 
