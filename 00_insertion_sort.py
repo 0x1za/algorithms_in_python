@@ -1,9 +1,9 @@
-nums = [4,3,2,1]
+def insertion(array):
+    for i in range(1, len(array)):
+        j = i -1
+        while array[j] > array[j+1] and j >= 0:
+            array[j], array[j+1] = array[j+1], array[j]
+            j-=1
+    return array
 
-sorted_position = 0
-inner_tracker = 1
-while sorted_position < len(nums)-1:
-    if nums[sorted_position] > nums[inner_tracker]:
-        print (nums[sorted_position], nums[inner_tracker])
-    sorted_position+=1
-    inner_tracker+=1
+print (insertion([7, 8, 5, 4, 9, 2]))
