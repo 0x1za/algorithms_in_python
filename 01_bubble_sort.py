@@ -1,4 +1,5 @@
 def bubbleSort(arr):
+    # This is the bubble sort algorithm implementation.
 
     ind = 0
     while ind < len(arr):
